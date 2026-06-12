@@ -1,10 +1,12 @@
---- a/drivers/platform/x86/asus-armoury.h	2026-06-08 12:41:50.000000000 +0700
-+++ b/drivers/platform/x86/asus-armoury.h	2026-06-11 07:59:42.839625696 +0700
-@@ -2274,6 +2274,35 @@
+diff --git a/drivers/platform/x86/asus-armoury.h b/drivers/platform/x86/asus-armoury.h
+index 692978b61959f4..f4639992efad89 100644
+--- a/drivers/platform/x86/asus-armoury.h
++++ b/drivers/platform/x86/asus-armoury.h
+@@ -2274,6 +2274,36 @@ static const struct dmi_system_id power_limits[] = {
  			},
  		},
  	},
-+    {
++	{
 +		.matches = {
 +			DMI_MATCH(DMI_BOARD_NAME, "FX608JPR"),
 +		},
@@ -30,7 +32,8 @@
 +				.ppt_pl2_sppt_max = 65,
 +				.nv_temp_target_min = 75,
 +				.nv_temp_target_max = 87,
-+			}
++			},
++			.requires_fan_curve = false,
 +		},
 +	},
  	{}
